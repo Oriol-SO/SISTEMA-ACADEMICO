@@ -1,0 +1,288 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100vh;
+    background-image: url("../IMG/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.login-box {
+    width: 400px;
+    height: 520px;
+    background:linear-gradient(120deg,#12546169,#0d35417c,#070d0f);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 10px;
+    box-shadow: 7px 13px 37px #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box .avatar{  
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    position: absolute;
+    top: -70px;
+    left: calc(50% - 70px);
+    border-style: solid;
+    border-color: rgb(240, 41, 6);
+}/*
+@font-face{
+    font-family: 'fuente';
+    src: url(../fuentes/Revamped.otf);
+}
+@font-face{
+    font-family: 'fuente1';
+    src: url(../fuentes/Huggable\ Hedgehogs\ Demo.otf);
+}*/
+
+.login-box h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15;
+    padding: 5;
+    text-align: center;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: 300;
+}
+.login-box label{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+    font-size: 20px;
+    font-weight: 250;
+}
+
+.login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.login-box input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background:linear-gradient(130deg,#08353680,#15888b80,#1bb0b380);
+    color: #fff;
+    font-size: 26px;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+.login-box input[type="submit"]:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+.roles{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.roles select{
+    width: 80%;
+   
+}
+@media screen and (max-width: 650px){
+    .login-box{
+        width: 80%; 
+
+    }
+    .login-box h1{
+        display: flex;
+        font-size: 30px;
+    }
+    .login-box form label{
+        font-size: 20px;
+    }
+    .login-box .avatar{
+        width: 100px;
+        height: 100px;
+        top: -50px;
+        left: calc(50% - 50px);
+    }
+}
+
+@media(max-height:700px){
+    .login-box .avatar{
+        width: 100px;
+        height: 100px;
+        left: calc(50% - 50px);
+    }
+    
+}
+@media(max-height:600px){
+    .login-box .avatar{
+        width: 80px;
+        height: 80px;
+        left: calc(50% - 50px);
+        top:-15px;
+    }
+    .login-box h1 {
+        display: flex;
+        font-size: 20px;
+    }
+    label{
+        font-size: 12px !important;
+    }
+    .login-box{
+        height: 95%;
+    }
+    .login-box input[type="submit"]{
+        height: 30px;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+}
+
+
+
+@media(max-height:400px){
+    .title{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: -12px;
+    }
+
+    .login-box .avatar{
+        width: 80px;
+        height: 80px;
+        left: calc(50% - 50px);
+    }
+    .login-box h1{
+        font-size: 25px;
+        margin: auto;
+    }
+    .login-box{
+        width: 790px;
+        height: 90%;
+        flex-direction: row;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .login-box .avatar{
+        position: initial; 
+        height: 170px;
+        width: 170px;
+        margin: auto;
+    }
+    form{
+       margin-left: auto;
+       margin-top: 30px;
+    }
+    @media(max-width:830px){
+        .login-box{
+            width: 90%;
+        }
+    }
+
+}
+@media(max-height:380px){
+    .login-box h1{
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .login-box .avatar{
+        position: initial; 
+        height: 160px;
+        width: 160px;
+        margin: auto;
+    }
+    form{
+       margin-left: auto;
+       margin-top: 20px;
+    }
+    label{
+        font-size: 15px !important;
+    }
+    
+.login-box input[type="submit"]{
+    height: 30px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+}
+@media(max-height:300px){
+    .login-box h1{
+        font-size: 15px;
+        margin: 0;
+    }
+    .login-box{
+
+        overflow: auto;
+ 
+    }
+    .title{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 5px;
+    }
+    .login-box .avatar{
+        position: initial; 
+        height: 160px;
+        width: 160px;
+        margin: auto;
+    }
+    form{
+       margin-left: auto;
+       margin-top: 20px;
+    }
+    label{
+        font-size: 15px !important;
+    }
+    
+    .login-box input[type="submit"]{
+        height: 30px;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    @media(max-width:600px){
+        .login-box{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media(max-width:580px ){
+    @media( max-height:400px){
+        .avatar{
+            display: none;
+        }
+        form{
+            margin: auto;
+        }
+        h1{
+            font-size: 15px !important;
+        }
+        label{
+            font-size: 12;
+        }
+    }
+}
