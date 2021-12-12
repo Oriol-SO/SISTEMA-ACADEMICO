@@ -1,3 +1,6 @@
+CREATE DATABASE sistema_academico;
+USE sistema_academico;
+
 CREATE TABLE USUARIO (
   `ID_USER` varchar(10) NOT NULL,
   `NOMBRE` varchar(50) NOT NULL,
@@ -68,4 +71,4 @@ NOTA INT,
  CONSTRAINT califi_class FOREIGN KEY (ID_CLASS) REFERENCES CLASE (ID_CLASS)
 );
 
-INSERT INTO `sistema_academico`.`USUARIO` (`ID_USER`, `NOMBRE`, `APELLIDO`, `DNI`, `PASSWORD`, `TIPO`) VALUES ('U0002', 'JUAN', 'ALARCON', '23150122', '123456', 'profe');
+INSERT INTO `sistema_academico`.`USUARIO` (`ID_USER`, `NOMBRE`, `APELLIDO`, `DNI`, `PASSWORD`, `TIPO`) VALUES ('U000', 'JUAN', 'ALARCON', '23150122', '123456', 'profe');
