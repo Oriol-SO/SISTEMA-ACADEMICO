@@ -14,7 +14,7 @@ require("connect.php");
             $_SESSION['DNI']=$dni;
             $_SESSION['PASS']=$pass;
             $_SESSION['TIPO']=$tipo;
-            header("location:inicio.php");
+            header("location:SISTEMA/inicio.php");
         }else{
             ?>
             <script>
