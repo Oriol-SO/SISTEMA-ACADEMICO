@@ -271,7 +271,7 @@
 
 <!-- DASHBOARD-->
   <li class="nav-item">
-    <a class="nav-link collapsed" href="inicio.php">
+    <a class="nav-link collapsed " href="inicio.php">
       <i class="bi bi-grid"></i>
       <span>Dashboard</span>
     </a>
@@ -353,16 +353,15 @@
 
   <!-- NOTAS-->
   <li class="nav-item">
-    <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+    <a class="nav-link " data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
       <i class="bi bi-layout-text-window-reverse"></i><span>Notas</span><i class="bi bi-chevron-down ms-auto"></i>
     </a>
-    <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+    <ul id="tables-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
       <li>
-        <a href="viewnotas.php">
+        <a href="viewnotas.php" class="active">
           <i class="bi bi-circle"></i><span>General</span>
         </a>
       </li>
-   
     </ul>
   </li><!-- End Tables Nav -->
 <?php } ?>
@@ -379,7 +378,7 @@
 
 
   <li class="nav-item">
-    <a class="nav-link " href="contacto.php">
+    <a class="nav-link collapsed" href="contacto.php">
       <i class="bi bi-envelope"></i>
       <span>Contacto</span>
     </a>
@@ -391,97 +390,88 @@
 
 </aside><!-- End Sidebar-->
 
-  <!-- ======= MAIN ======= -->
 <main id="main" class="main">
 
 <div class="pagetitle">
-  <h1>Contactanos</h1>
+  <h1>Notas Generales</h1>
   <nav>
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-      <li class="breadcrumb-item">Paginas</li>
-      <li class="breadcrumb-item active">Contacto</li>
+      <li class="breadcrumb-item">Notas</li>
+      <li class="breadcrumb-item active">General</li>
     </ol>
   </nav>
 </div><!-- End Page Title -->
 
-<section class="section contact">
+<section class="section">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Tus notas</h5>
+          
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Curso</th>
+                <th scope="col">nota 1</th>
+                <th scope="col">nota 2</th>
+                <th scope="col">nota 3</th>
+                <th scope="col">nota 4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Matematica</td>
+                <td>12</td>
+                <td>14</td>
+                <td>16</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Matematica</td>
+                <td>12</td>
+                <td>14</td>
+                <td>16</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Matematica</td>
+                <td>12</td>
+                <td>14</td>
+                <td>16</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Matematica</td>
+                <td>12</td>
+                <td>14</td>
+                <td>16</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Matematica</td>
+                <td>12</td>
+                <td>14</td>
+                <td>16</td>
+                <td>15</td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- End Bordered Table -->
 
-  <div class="row gy-4">
-
-    <div class="col-xl-6">
-
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="info-box card">
-            <i class="bi bi-geo-alt"></i>
-            <h3>Dirección</h3>
-            <p>A108 San isidro,<br>Lima-Perú, LP 98459</p>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="info-box card">
-            <i class="bi bi-telephone"></i>
-            <h3>Telefonos</h3>
-            <p>+51 546 485 154<br>  6678 254445 41</p>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="info-box card">
-            <i class="bi bi-envelope"></i>
-            <h3>Email</h3>
-            <p>info@example.com<br>contact@example.com</p>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="info-box card">
-            <i class="bi bi-clock"></i>
-            <h3>Atención</h3>
-            <p>Lunes-Sabado<br>9:00AM - 05:00PM</p>
-          </div>
+        
         </div>
       </div>
 
     </div>
-
-    <div class="col-xl-6">
-      <div class="card p-4">
-      <h5>Escribenos</h5>
-        <form action="forms/contact.php" method="post" class="php-email-form">
-          <div class="row gy-4">
-
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Tu nombre" required>
-            </div>
-
-            <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Tu Email" required>
-            </div>
-
-            <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Asunto" required>
-            </div>
-
-            <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Mensaje" required></textarea>
-            </div>
-
-            <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-
-              <button type="submit">Enviar Mensaje</button>
-            </div>
-
-          </div>
-        </form>
-      </div>
-
-    </div>
-
   </div>
-
 </section>
 
 </main><!-- End #main -->
@@ -517,4 +507,4 @@
 
 </body>
 
-</html>+
+</html>

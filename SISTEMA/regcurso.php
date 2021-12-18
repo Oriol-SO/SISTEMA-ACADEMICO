@@ -284,27 +284,32 @@
     </a>
     <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
       <li>
-        <a href="forms-elements.html">
+        <a href="addalumno.php">
           <i class="bi bi-circle"></i><span>Registrar Alumno</span>
         </a>
       </li>
       <li>
-        <a href="forms-layouts.html">
+        <a href="addprofe.php">
           <i class="bi bi-circle"></i><span>Registrar Docente</span>
         </a>
       </li>
       <li>
-        <a href="forms-editors.html">
+        <a href="adddirec.php">
           <i class="bi bi-circle"></i><span>Registrar Director </span>
         </a>
       </li>
       <li>
-        <a href="forms-validation.html">
+        <a href="addcurso.php">
           <i class="bi bi-circle"></i><span>Registrar Cursos</span>
         </a>
       </li>
       <li>
-        <a href="forms-validation.html">
+        <a href="addsalon.php">
+          <i class="bi bi-circle"></i><span>Gestionar Salones</span>
+        </a>
+      </li>
+      <li>
+        <a href="addadmin.php">
           <i class="bi bi-circle"></i><span>Gestionar Administrador</span>
         </a>
       </li>
@@ -319,18 +324,14 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables-general.html">
+            <a href="tables.php">
               <i class="bi bi-circle"></i><span>Tablas generales</span>
             </a>
           </li>
-          <li>
-            <a href="tables-data.html">
-              
-            </a>
-          </li>
+          
         </ul>
       </li><!-- End Tables Nav -->
-  <?php }
+       <?php }
   if($tipo=='alu'){
   ?>
   <!-- CLASE-->
@@ -356,15 +357,11 @@
     </a>
     <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
       <li>
-        <a href="tables-general.html">
+        <a href="viewnotas.php">
           <i class="bi bi-circle"></i><span>General</span>
         </a>
       </li>
-      <li>
-        <a href="tables-data.html">
-          
-        </a>
-      </li>
+      
     </ul>
   </li><!-- End Tables Nav -->
 <?php } ?>
