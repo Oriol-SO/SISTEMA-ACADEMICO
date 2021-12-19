@@ -323,12 +323,23 @@
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-layout-text-window-reverse"></i><span>Tablas</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="tables-nav" class="nav-content collapse  " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables.php">
-              <i class="bi bi-circle"></i><span>Tablas generales</span>
+            <a href="tables.php" >
+              <i class="bi bi-circle"></i><span>Alumnos</span>
             </a>
           </li>
+          <li>
+            <a href="tablesprof.php">
+              <i class="bi bi-circle"></i><span>Docentes</span>
+            </a>
+          </li>
+          <li>
+            <a href="tablesadmi.php">
+              <i class="bi bi-circle"></i><span>Administrativos</span>
+            </a>
+          </li>
+
           
         </ul>
       </li><!-- End Tables Nav -->
@@ -366,7 +377,28 @@
     
     </ul>
   </li><!-- End Tables Nav -->
-<?php } ?>
+<?php }?>  
+
+ <!-- SALONES-->
+<?php if($tipo=="profe"){?> 
+ 
+  <li class="nav-item">
+    <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+      <i class="bi bi-journal-text"></i><span>Clase</span><i class="bi bi-chevron-down ms-auto"></i>
+    </a>
+    <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+      <li>
+        <a href="salones.php">
+          <i class="bi bi-circle"></i><span>Salones</span>
+        </a>
+      </li>
+      
+    </ul>
+
+  </li><!-- End Forms Nav -->
+
+<?php }
+?>
 
 
   <li class="nav-heading">Paginas</li>

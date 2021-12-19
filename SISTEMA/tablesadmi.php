@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <title>Tablas Administrativos</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon1.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -308,6 +308,7 @@
           <i class="bi bi-circle"></i><span>Gestionar Salones</span>
         </a>
       </li>
+
       <li>
         <a href="addadmin.php">
           <i class="bi bi-circle"></i><span>Gestionar Administrador</span>
@@ -319,10 +320,10 @@
 
   <!-- TABLAS-->
   <li class="nav-item">
-        <a class="nav-link collapsed " data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link " data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-layout-text-window-reverse"></i><span>Tablas</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="tables-nav" class="nav-content collapse  " data-bs-parent="#sidebar-nav">
+        <ul id="tables-nav" class="nav-content collapse show  " data-bs-parent="#sidebar-nav">
           <li>
             <a href="tables.php"  >
               <i class="bi bi-circle"></i><span>Alumnos</span>
@@ -334,7 +335,7 @@
             </a>
           </li>
           <li>
-            <a href="tablesadmi.php">
+            <a href="tablesadmi.php" class="active">
               <i class="bi bi-circle"></i><span>Administrativos</span>
             </a>
           </li>
@@ -364,15 +365,16 @@
 
   <!-- NOTAS-->
   <li class="nav-item">
-    <a class="nav-link " data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+    <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
       <i class="bi bi-layout-text-window-reverse"></i><span>Notas</span><i class="bi bi-chevron-down ms-auto"></i>
     </a>
-    <ul id="tables-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+    <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
       <li>
-        <a href="viewnotas.php" class="active">
+        <a href="viewnotas.php">
           <i class="bi bi-circle"></i><span>General</span>
         </a>
       </li>
+    
     </ul>
   </li><!-- End Tables Nav -->
 <?php } ?>
@@ -404,84 +406,82 @@
 <main id="main" class="main">
 
 <div class="pagetitle">
-  <h1>Notas Generales</h1>
+  <h1>Relacion General de personal administrativo</h1>
   <nav>
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-      <li class="breadcrumb-item">Notas</li>
-      <li class="breadcrumb-item active">General</li>
+      <li class="breadcrumb-item">Tablas</li>
+      <li class="breadcrumb-item active">Administrativos</li>
     </ol>
   </nav>
 </div><!-- End Page Title -->
 
 <section class="section">
   <div class="row">
-    <div class="col-lg-12">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Tus notas</h5>
-          
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Curso</th>
-                <th scope="col">nota 1</th>
-                <th scope="col">nota 2</th>
-                <th scope="col">nota 3</th>
-                <th scope="col">nota 4</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Matematica</td>
-                <td>12</td>
-                <td>14</td>
-                <td>16</td>
-                <td>15</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Matematica</td>
-                <td>12</td>
-                <td>14</td>
-                <td>16</td>
-                <td>15</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Matematica</td>
-                <td>12</td>
-                <td>14</td>
-                <td>16</td>
-                <td>15</td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Matematica</td>
-                <td>12</td>
-                <td>14</td>
-                <td>16</td>
-                <td>15</td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Matematica</td>
-                <td>12</td>
-                <td>14</td>
-                <td>16</td>
-                <td>15</td>
-              </tr>
-            </tbody>
-          </table>
-          <!-- End Bordered Table -->
+    <div class="col-lg-10">
 
-        
-        </div>
-      </div>
+    <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Administrativos</h5>
+             
 
-    </div>
+              <!-- Table with stripped rows -->
+              <table class="table datatable">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Start Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Brandon Jacob</td>
+                    <td>Designer</td>
+                    <td>28</td>
+                    <td>2016-05-25</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Bridie Kessler</td>
+                    <td>Developer</td>
+                    <td>35</td>
+                    <td>2014-12-05</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Ashleigh Langosh</td>
+                    <td>Finance</td>
+                    <td>45</td>
+                    <td>2011-08-12</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Angus Grady</td>
+                    <td>HR</td>
+                    <td>34</td>
+                    <td>2012-06-11</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Raheem Lehner</td>
+                    <td>Dynamic Division Officer</td>
+                    <td>47</td>
+                    <td>2011-04-19</td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End Table with stripped rows -->
+
+            </div>
+          </div>
+    
+
+  </div>
+
   </div>
 </section>
 

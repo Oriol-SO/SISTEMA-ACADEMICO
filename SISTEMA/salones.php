@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <title>Clase Salones</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon1.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -308,6 +308,7 @@
           <i class="bi bi-circle"></i><span>Gestionar Salones</span>
         </a>
       </li>
+
       <li>
         <a href="addadmin.php">
           <i class="bi bi-circle"></i><span>Gestionar Administrador</span>
@@ -319,12 +320,12 @@
 
   <!-- TABLAS-->
   <li class="nav-item">
-        <a class="nav-link collapsed " data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-layout-text-window-reverse"></i><span>Tablas</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="tables-nav" class="nav-content collapse  " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables.php"  >
+            <a href="tables.php" >
               <i class="bi bi-circle"></i><span>Alumnos</span>
             </a>
           </li>
@@ -364,18 +365,40 @@
 
   <!-- NOTAS-->
   <li class="nav-item">
-    <a class="nav-link " data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+    <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
       <i class="bi bi-layout-text-window-reverse"></i><span>Notas</span><i class="bi bi-chevron-down ms-auto"></i>
     </a>
-    <ul id="tables-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+    <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
       <li>
-        <a href="viewnotas.php" class="active">
+        <a href="viewnotas.php">
           <i class="bi bi-circle"></i><span>General</span>
         </a>
       </li>
+    
     </ul>
   </li><!-- End Tables Nav -->
-<?php } ?>
+<?php }?>  
+
+ <!-- SALONES-->
+<?php if($tipo=="profe"){?> 
+ 
+  <li class="nav-item">
+    <a class="nav-link " data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+      <i class="bi bi-journal-text"></i><span>Clase</span><i class="bi bi-chevron-down ms-auto"></i>
+    </a>
+    <ul id="forms-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+      <li>
+        <a href="salones.php" class="active">
+          <i class="bi bi-circle"></i><span>Salones</span>
+        </a>
+      </li>
+      
+    </ul>
+
+  </li><!-- End Forms Nav -->
+
+<?php }
+?>
 
 
   <li class="nav-heading">Paginas</li>
@@ -404,86 +427,214 @@
 <main id="main" class="main">
 
 <div class="pagetitle">
-  <h1>Notas Generales</h1>
+  <h1>Salones </h1>
   <nav>
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-      <li class="breadcrumb-item">Notas</li>
-      <li class="breadcrumb-item active">General</li>
+      <li class="breadcrumb-item ">Clase</li>
+      <li class="breadcrumb-item active">Salones</li>
     </ol>
   </nav>
 </div><!-- End Page Title -->
 
 <section class="section">
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Tus notas</h5>
-          
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Curso</th>
-                <th scope="col">nota 1</th>
-                <th scope="col">nota 2</th>
-                <th scope="col">nota 3</th>
-                <th scope="col">nota 4</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Matematica</td>
-                <td>12</td>
-                <td>14</td>
-                <td>16</td>
-                <td>15</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Matematica</td>
-                <td>12</td>
-                <td>14</td>
-                <td>16</td>
-                <td>15</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Matematica</td>
-                <td>12</td>
-                <td>14</td>
-                <td>16</td>
-                <td>15</td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Matematica</td>
-                <td>12</td>
-                <td>14</td>
-                <td>16</td>
-                <td>15</td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Matematica</td>
-                <td>12</td>
-                <td>14</td>
-                <td>16</td>
-                <td>15</td>
-              </tr>
-            </tbody>
-          </table>
-          <!-- End Bordered Table -->
+      <div class="row">
+        <div class="col-lg-12">
 
-        
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Salones en los que dictas</h5>
+
+              <!-- Pills Tabs -->
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Primer Grado</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Segundo Grado</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Tercer Grado</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact2" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Cuarto Grado</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact3" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Quinto Grado</button>
+                </li>
+              </ul>
+              <div class="tab-content pt-2" id="myTabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Seccion A</h3>
+                            <h5> Curso: Matematica </h5>
+
+                            <a href="calificar.php">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
+                                Calificar
+                            </button>
+                            </a>
+               
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
+                                Lista de Alumnos
+                            </button>                           
+
+                        </div>
+                    </div>            
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Seccion B</h3>
+                            <h5> Curso: Matematica </h5>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
+                                Calificar
+                            </button>
+               
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
+                                Lista de Alumnos
+                            </button>                           
+
+                        </div>
+                    </div>            
+                   
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Seccion A</h3>
+                            <h5> Curso:Trigonometria </h5>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
+                                Calificar
+                            </button>
+               
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
+                                Lista de Alumnos
+                            </button>                           
+
+                        </div>
+                    </div>            
+               
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Seccion A</h3>
+                            <h5> Curso: Matematica </h5>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
+                                Calificar
+                            </button>
+               
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
+                                Lista de Alumnos
+                            </button>                           
+
+                        </div>
+                    </div>            
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Seccion B</h3>
+                            <h5> Curso: Matematica </h5>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
+                                Calificar
+                            </button>
+               
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
+                                Lista de Alumnos
+                            </button>                           
+
+                        </div>
+                    </div>            
+                   
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Seccion A</h3>
+                            <h5> Curso:Trigonometria </h5>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
+                               <a href="#">Calificar</a>
+                            </button>
+               
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
+                                Lista de Alumnos
+                            </button>                           
+
+                        </div>
+                    </div>            
+                
+                </div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="contact-tab">
+                  Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+                </div>
+                <div class="tab-pane fade" id="pills-contact2" role="tabpanel" aria-labelledby="contact-tab">
+                  animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+                </div>
+                <div class="tab-pane fade" id="pills-contact3" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Seccion A</h3>
+                            <h5> Curso: Matematica </h5>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
+                                Calificar
+                            </button>
+               
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
+                                Lista de Alumnos
+                            </button>                           
+
+                        </div>
+                    </div>            
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Seccion B</h3>
+                            <h5> Curso: Matematica </h5>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
+                                Calificar
+                            </button>
+               
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
+                                Lista de Alumnos
+                            </button>                           
+
+                        </div>
+                    </div>            
+                   
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Seccion A</h3>
+                            <h5> Curso:Trigonometria </h5>
+
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
+                                Calificar
+                            </button>
+               
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
+                                Lista de Alumnos
+                            </button>                           
+
+                        </div>
+                    </div>            
+               
+               
+                </div>
+              </div><!-- End Pills Tabs -->
+
+            </div>
+          </div>
+
         </div>
-      </div>
 
-    </div>
-  </div>
-</section>
+ 
+
+      </div>
+    </section>
 
 </main><!-- End #main -->
 
