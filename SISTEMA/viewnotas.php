@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon1.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -52,6 +52,7 @@
 
            $nombre=$dato['NOMBRE'];
            $ape=$dato['APELLIDO'];
+           $id_user=$dato['ID_USER'];
             $rol='';
            switch($tipo){
                 case'alu': $rol='Estudiante'; 
@@ -421,60 +422,7 @@
         <div class="card-body">
           <h5 class="card-title">Tus notas</h5>
           
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Curso</th>
-                <th scope="col">nota 1</th>
-                <th scope="col">nota 2</th>
-                <th scope="col">nota 3</th>
-                <th scope="col">nota 4</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Matematica</td>
-                <td>12</td>
-                <td>14</td>
-                <td>16</td>
-                <td>15</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Matematica</td>
-                <td>12</td>
-                <td>14</td>
-                <td>16</td>
-                <td>15</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Matematica</td>
-                <td>12</td>
-                <td>14</td>
-                <td>16</td>
-                <td>15</td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Matematica</td>
-                <td>12</td>
-                <td>14</td>
-                <td>16</td>
-                <td>15</td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Matematica</td>
-                <td>12</td>
-                <td>14</td>
-                <td>16</td>
-                <td>15</td>
-              </tr>
-            </tbody>
-          </table>
+            <?php include('listas/notasalu.php'); ?>
           <!-- End Bordered Table -->
 
         

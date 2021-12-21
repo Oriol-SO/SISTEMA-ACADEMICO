@@ -423,13 +423,12 @@
               <h5 class="card-title">Crea Salones</h5>
 
               <!-- Floating Labels Form -->
-              <form class="row g-3">
+              <form class="row g-3" method="post">
               
                 <div class="col-md-12">
                   <div class="form-floating mb-3">
                     <select class="form-select" id="floatingSelect" aria-label="State" name="curso" >
-                      <option value="1">Matematica</option>
-                      <option value="2">comunicacion</option>
+                    <?php include('listas/cursos.php');?>
                     </select>
                     <label for="floatingSelect">Curso</label>
                   </div>
@@ -437,8 +436,11 @@
                 <div class="col-md-4">
                   <div class="form-floating mb-3">
                     <select class="form-select" id="floatingSelect" aria-label="State" name="grado">
-                      <option value="1">Primer</option>
+                      <option value="1">Primero</option>
                       <option value="2">Segundo</option>
+                      <option value="3">Tercero</option>
+                      <option value="4">Cuarto</option>
+                      <option value="5">Quinto</option>
                     </select>
                     <label for="floatingSelect">Grado</label>
                   </div>
@@ -446,7 +448,7 @@
                 <div class="col-md-6">
                   <div class="col-md-12">
                     <div class="form-floating">
-                      <input type="text" class="form-control" id="floatingCity" placeholder="Ceccion" name="seccion">
+                      <input type="text" class="form-control" id="floatingCity" placeholder="seccion" name="secc">
                       <label for="floatingCity">Seccion</label>
                     </div>
                   </div>
@@ -454,21 +456,22 @@
               
                 <div class="col-md-12">
                   <div class="form-floating mb-3">
-                    <select class="form-select" id="floatingSelect" aria-label="State" name="curso" placeholder=" " >
-                    <option value="1"></option>
-                      <option value="1">Jose de la Torre Ugarte</option>
-                      <option value="2">Juana de la Sota Gracia</option>
+                    <select class="form-select" id="floatingSelect" aria-label="State" name="profe" placeholder=" " >
+                      <option value=""></option>
+                       <?php include('listas/profesores.php');?>
+                      
                     </select>
                     <label for="floatingSelect">Docente Encargado</label>
                   </div>
                 </div>
                 <div class="text-center">
-                  <button type="submit" class="btn btn-primary">Crear Salon</button>
+                  <button type="submit" class="btn btn-primary" name="enviar">Crear Salon</button>
                   <button type="reset" class="btn btn-secondary">Cancelar</button>
                 </div>
               </form><!-- End floating Labels Form -->
 
             </div>
+            <?php include('php/gest_salones.php') ?>
           </div>
 
     </div>

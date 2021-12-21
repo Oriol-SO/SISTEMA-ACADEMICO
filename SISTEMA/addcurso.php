@@ -423,7 +423,7 @@
           <h5 class="card-title">Ingresa los datos del Curso</h5>
 
           <!-- Floating Labels Form -->
-          <form class="row g-3">
+          <form class="row g-3" method="post">
             <div class="col-md-12">
               <div class="form-floating">
                 <input type="text" class="form-control" id="floatingName" placeholder="Name"  name="nombre"require>
@@ -439,6 +439,7 @@
           </form><!-- End floating Labels Form -->
 
         </div>
+        <?php include('php/add_curso.php'); ?>
       </div>
 
     </div>

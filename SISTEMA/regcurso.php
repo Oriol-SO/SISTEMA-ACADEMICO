@@ -52,6 +52,7 @@
 
            $nombre=$dato['NOMBRE'];
            $ape=$dato['APELLIDO'];
+           $id_user=$dato['ID_USER'];
             $rol='';
            switch($tipo){
                 case'alu': $rol='Estudiante'; 
@@ -426,28 +427,23 @@
               <h5 class="card-title"> Inscribete en los cursos que estan disponibles para ti</h5>
 
               <!-- No Labels Form -->
-              <form class="row g-3">
+              <form class="row g-3" method="post">
                 
                 <div class="col-md-10">
-                  <select id="inputState" class="form-select">
-                    <option>Matematica</option>
-                    <option>Geografia</option>
-                    <option>Quimica</option>
-                    <option>Historia</option>
-                    <option>Computacion</option>
+                  <select id="inputState" class="form-select" name="curso">
+                    <?php include('listas/cursomatri.php');?>
                   </select>
                 </div>
                 
                 <div class="text-center">
-                  <button type="submit" class="btn btn-primary">Inscribirse</button>
+                  <button type="submit" class="btn btn-primary" name="enviar">Inscribirse</button>
                   <button type="reset" class="btn btn-secondary">Cancelar</button>
                 </div>
               </form><!-- End No Labels Form -->
 
             </div>
+           <?php include("php/matricula.php");?>
           </div>
-
-
         </div>
     </div>
 

@@ -64,6 +64,8 @@
                           break;
                 
            }
+           $alumnos=0;
+           $empleados=0;
     ?>
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
@@ -457,7 +459,7 @@
                   <i class="bi bi-people"></i>
                 </div>
                 <div class="ps-3">
-                  <h6>145</h6>
+                  <h6><?php include('listas/num_rows.php'); echo $alumnos; ?></h6>
                  
 
                 </div>
@@ -479,7 +481,7 @@
                   <i class="bi  bi-table"></i>
                 </div>
                 <div class="ps-3">
-                  <h6>25</h6>
+                  <h6>10</h6>
                
 
                 </div>
@@ -503,7 +505,7 @@
                   <i class="bi bi-people"></i>
                 </div>
                 <div class="ps-3">
-                  <h6>40</h6>
+                  <h6><?php echo $empleados; ?></h6>
                   
 
                 </div>

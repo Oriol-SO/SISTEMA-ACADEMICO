@@ -423,7 +423,7 @@
           <h5 class="card-title">Ingresa los datos del Alumno</h5>
 
           <!-- Floating Labels Form -->
-          <form class="row g-3">
+          <form class="row g-3" method="post">
             <div class="col-md-12">
               <div class="form-floating">
                 <input type="text" class="form-control" id="floatingName" placeholder="Name"  name="nombre"require>
@@ -440,7 +440,7 @@
            
             <div class="col-md-6">
               <div class="form-floating">
-                <input type="email" class="form-control" id="floatingEmail" placeholder="dni" name="dni"require>
+                <input type="text" class="form-control" id="floatingEmail" placeholder="dni" name="dni"require>
                 <label for="floatingEmail">DNI</label>
               </div>
             </div>
@@ -479,9 +479,11 @@
             </div>
           </form><!-- End floating Labels Form -->
 
+          
         </div>
+        <?php include('php/addalumno.php'); ?>
       </div>
-
+     
     </div>
   </div>
 </section>
