@@ -408,7 +408,7 @@
   <h1>Notas Generales</h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+      <li class="breadcrumb-item"><a href="inicio.php">Inicio</a></li>
       <li class="breadcrumb-item">Notas</li>
       <li class="breadcrumb-item active">General</li>
     </ol>

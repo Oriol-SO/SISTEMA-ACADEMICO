@@ -302,6 +302,7 @@
     new simpleDatatables.DataTable(datatable);
   })
 
+
   /**
    * Autoresize echart charts
    */
@@ -316,4 +317,8 @@
     }, 200);
   }
 
+
+
 })();
+
+

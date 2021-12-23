@@ -416,13 +416,13 @@
   </nav>
 </div><!-- End Page Title -->
 
-<section class="section">
+<section class="section" id="secciontabsalumno">
   <div class="row">
-    <div class="col-lg-10">
+    <div class="col-lg-12" id="tabsalumnogrado">
     
     <?php include('listas/table_alumnosg.php');?>
    
-  </div>
+    </div>
 
   </div>
 </section>
@@ -454,10 +454,11 @@
   <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/main2.js"></script>
+ 
 </body>
 
 </html> 

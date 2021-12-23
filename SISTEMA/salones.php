@@ -52,6 +52,7 @@
 
            $nombre=$dato['NOMBRE'];
            $ape=$dato['APELLIDO'];
+           $id_user=$dato['ID_USER'];
             $rol='';
            switch($tipo){
                 case'alu': $rol='Estudiante'; 
@@ -430,7 +431,7 @@
   <h1>Salones </h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+      <li class="breadcrumb-item"><a href="inicio.php">Inicio</a></li>
       <li class="breadcrumb-item ">Clase</li>
       <li class="breadcrumb-item active">Salones</li>
     </ol>
@@ -446,185 +447,8 @@
             <div class="card-body">
               <h5 class="card-title">Salones en los que dictas</h5>
 
+              <?php include('listas/salones_dicta.php') ?>
               <!-- Pills Tabs -->
-              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Primer Grado</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Segundo Grado</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Tercer Grado</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact2" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Cuarto Grado</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact3" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Quinto Grado</button>
-                </li>
-              </ul>
-              <div class="tab-content pt-2" id="myTabContent">
-                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="home-tab">
-                <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Seccion A</h3>
-                            <h5> Curso: Matematica </h5>
-
-                            <a href="calificar.php">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
-                                Calificar
-                            </button>
-                            </a>
-               
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
-                                Lista de Alumnos
-                            </button>                           
-
-                        </div>
-                    </div>            
-                    
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Seccion B</h3>
-                            <h5> Curso: Matematica </h5>
-
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
-                                Calificar
-                            </button>
-               
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
-                                Lista de Alumnos
-                            </button>                           
-
-                        </div>
-                    </div>            
-                   
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Seccion A</h3>
-                            <h5> Curso:Trigonometria </h5>
-
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
-                                Calificar
-                            </button>
-               
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
-                                Lista de Alumnos
-                            </button>                           
-
-                        </div>
-                    </div>            
-               
-                </div>
-                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="profile-tab">
-                <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Seccion A</h3>
-                            <h5> Curso: Matematica </h5>
-
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
-                                Calificar
-                            </button>
-               
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
-                                Lista de Alumnos
-                            </button>                           
-
-                        </div>
-                    </div>            
-                    
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Seccion B</h3>
-                            <h5> Curso: Matematica </h5>
-
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
-                                Calificar
-                            </button>
-               
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
-                                Lista de Alumnos
-                            </button>                           
-
-                        </div>
-                    </div>            
-                   
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Seccion A</h3>
-                            <h5> Curso:Trigonometria </h5>
-
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
-                               <a href="#">Calificar</a>
-                            </button>
-               
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
-                                Lista de Alumnos
-                            </button>                           
-
-                        </div>
-                    </div>            
-                
-                </div>
-                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="contact-tab">
-                  Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
-                </div>
-                <div class="tab-pane fade" id="pills-contact2" role="tabpanel" aria-labelledby="contact-tab">
-                  animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
-                </div>
-                <div class="tab-pane fade" id="pills-contact3" role="tabpanel" aria-labelledby="contact-tab">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Seccion A</h3>
-                            <h5> Curso: Matematica </h5>
-
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
-                                Calificar
-                            </button>
-               
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
-                                Lista de Alumnos
-                            </button>                           
-
-                        </div>
-                    </div>            
-                    
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Seccion B</h3>
-                            <h5> Curso: Matematica </h5>
-
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
-                                Calificar
-                            </button>
-               
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
-                                Lista de Alumnos
-                            </button>                           
-
-                        </div>
-                    </div>            
-                   
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Seccion A</h3>
-                            <h5> Curso:Trigonometria </h5>
-
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
-                                Calificar
-                            </button>
-               
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
-                                Lista de Alumnos
-                            </button>                           
-
-                        </div>
-                    </div>            
-               
-               
-                </div>
-              </div><!-- End Pills Tabs -->
 
             </div>
           </div>
