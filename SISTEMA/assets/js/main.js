@@ -248,7 +248,7 @@
         });
       }
     },
-    templates: [{
+    templates: [{ 
         title: 'New Table',
         description: 'creates a new table',
         content: '<div class="mceTmpl"><table width="98%%"  border="0" cellspacing="0" cellpadding="0"><tr><th scope="col"> </th><th scope="col"> </th></tr><tr><td> </td><td> </td></tr></table></div>'

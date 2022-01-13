@@ -40,16 +40,17 @@
                         <div class="card-body">
                             <h3 class="card-title">Seccion <?php echo $dato['SECCION'];?></h3>
                             <h5>  <?php echo $dato['NOMBRE']; ?> </h5>
-
-                            <a href="calificar.php">
+                            <?php $ids=$dato['ID_SALON'];
+                            ?>
+                            <a href="calificar.php?ids=<?php echo"$ids";?>">
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
                                 Calificar
                             </button>
                             </a>
-               
+                            <a href="listaAlumnos.php?ids=<?php echo"$ids";?>">
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
                                 Lista de Alumnos
-                            </button>                           
+                            </button>   </a>                        
 
                         </div>
                     </div>
@@ -65,12 +66,14 @@
                                 <h3 class="card-title">Seccion <?php echo $dato['SECCION'];?></h3>
                                 <h5>  <?php echo $dato['NOMBRE']; ?> </h5>
 
-                                <a href="calificar.php">
+                                <?php $ids=$dato['ID_SALON'];
+                                ?>
+                                <a href="calificar.php?ids=<?php echo"$ids";?>">
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
                                     Calificar
                                 </button>
                                 </a>
-                                <a href="listaAlumnos.php">
+                                <a href="listaAlumnos.php?ids=<?php echo"$ids";?>">
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
                                     Lista de Alumnos
                                 </button>   
@@ -92,12 +95,14 @@
                                     <h3 class="card-title">Seccion <?php echo $dato['SECCION'];?></h3>
                                     <h5>  <?php echo $dato['NOMBRE']; ?> </h5>
 
-                                    <a href="calificar.php">
+                                    <?php $ids=$dato['ID_SALON'];
+                                    ?>
+                                    <a href="calificar.php?ids=<?php echo"$ids";?>">
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
                                         Calificar
                                     </button>
                                     </a>
-                                    <a href="listaAlumnos.php">
+                                    <a href="listaAlumnos.php?ids=<?php echo"$ids";?>">
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
                                         Lista de Alumnos
                                     </button>   
@@ -117,12 +122,14 @@
                                     <h3 class="card-title">Seccion <?php echo $dato['SECCION'];?></h3>
                                     <h5>  <?php echo $dato['NOMBRE']; ?> </h5>
 
-                                    <a href="calificar.php">
+                                    <?php $ids=$dato['ID_SALON'];
+                                    ?>
+                                    <a href="calificar.php?ids=<?php echo"$ids";?>">
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
                                         Calificar
                                     </button>
                                     </a>
-                                    <a href="listaAlumnos.php">
+                                    <a href="listaAlumnos.php?ids=<?php echo"$ids";?>">
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
                                         Lista de Alumnos
                                     </button>   
@@ -142,12 +149,14 @@
                                 <h3 class="card-title">Seccion <?php echo $dato['SECCION'];?></h3>
                                 <h5>  <?php echo $dato['NOMBRE']; ?> </h5>
 
-                                <a href="calificar.php">
+                                <?php $ids=$dato['ID_SALON'];
+                                ?>
+                                <a href="calificar.php?ids=<?php echo"$ids";?>">
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollingModal">
                                     Calificar
                                 </button>
                                 </a>
-                                <a href="listaAlumnos.php">
+                                <a href="listaAlumnos.php?ids=<?php echo"$ids";?>">
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">
                                     Lista de Alumnos
                                 </button>   

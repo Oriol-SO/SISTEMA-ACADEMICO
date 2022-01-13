@@ -2,7 +2,7 @@
 $consult1="SELECT USUARIO.ID_USER,ID_PROFE,NOMBRE,APELLIDO,DNI,TELE,DIRECCION FROM USUARIO INNER JOIN PROFESOR ON USUARIO.ID_USER=PROFESOR.ID_USER";
 $res=mysqli_query($con,$consult1);  
 ?>
-<table class="table datatable">
+<table class="table datatable" id="tableprofe">
 <thead>
   <tr>
     <th scope="col">#</th>

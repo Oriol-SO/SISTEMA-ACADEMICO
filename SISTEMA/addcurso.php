@@ -443,6 +443,35 @@
       </div>
 
     </div>
+    
+    <div class="col-lg-6">
+          <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Cursos </h5>
+                <p>Se muestran los cursos registrados</p>
+                <!-- Small tables -->
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">curso</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php $res=mysqli_query($con,"SELECT NOMBRE FROM CURSO "); $i=1 ?>
+                      <?php while($dato=mysqli_fetch_array($res)){ ?>
+                        <tr>
+                            <th scope="row"><?php echo $i;?></th>
+                            <td><?php echo $dato['NOMBRE'];?></td>
+                        </tr>
+                        <?php $i++; }?>
+                  </tbody>
+                </table>
+                <!-- End small tables -->
+
+              </div>
+          </div>
+    </div>
   </div>
 </section>
 

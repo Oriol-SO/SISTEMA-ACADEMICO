@@ -71,6 +71,25 @@ $(document).ready(function() {
       rellenecampostabs.style.display='none';
     });
     
+ 
+    $( 'tr td input' ).blur(function(){
+      var dato= $(this).val();
+      var tu=$(this).attr('product');
+      var ida=$(this).attr('al');
+      //console.log(dato+"/ "+tu+"/ "+ida);
+      var action='upnot'
+      $.ajax({ 
+        url:'php/update_nota.php',
+        type: 'POST',
+        async:true,
+        data:{action:action,dato:dato,tu:tu,ida:ida},
+        success: function(response){
+            console.log(response);                
+        },error:function(error){
+          console.log(error);}       
+    });
+    });
+
 
   });
 
@@ -128,3 +147,16 @@ $(document).ready(function() {
     
     });
    }
+
+   function htmlexcel(idTable,filename)
+   {
+       var type='xlsx';
+       var data = document.getElementById(idTable);
+
+       var file = XLSX.utils.table_to_book(data, {sheet: "sheet1"});
+
+       XLSX.write(file, { bookType: type, bookSST: true, type: 'base64' });
+
+       XLSX.writeFile(file,filename+'.' + type);
+   }
+

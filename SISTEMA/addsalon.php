@@ -475,7 +475,12 @@
           </div>
 
     </div>
-  </div>
+    
+    <div class="col-lg-6">
+    <?php include('listas/lista_salones.php'); ?>
+    </div>
+  
+ </div>
 </section>
 
 </main><!-- End #main -->

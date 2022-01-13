@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <title>Clase Salones</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon1.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -54,6 +54,8 @@
            $ape=$dato['APELLIDO'];
            $id_user=$dato['ID_USER'];
             $rol='';
+           $id_salon=trim($_GET['ids']);
+
            switch($tipo){
                 case'alu': $rol='Estudiante'; 
                           break;
@@ -272,7 +274,7 @@
 
 <!-- DASHBOARD-->
   <li class="nav-item">
-    <a class="nav-link collapsed" href="inicio.php">
+    <a class="nav-link collapsed " href="inicio.php">
       <i class="bi bi-grid"></i>
       <span>Dashboard</span>
     </a>
@@ -309,6 +311,7 @@
           <i class="bi bi-circle"></i><span>Gestionar Salones</span>
         </a>
       </li>
+
       <li>
         <a href="addadmin.php">
           <i class="bi bi-circle"></i><span>Gestionar Administrador</span>
@@ -344,17 +347,17 @@
         </ul>
       </li><!-- End Tables Nav -->
       
-       <?php }
+  <?php }
   if($tipo=='alu'){
   ?>
   <!-- CLASE-->
   <li class="nav-item">
-    <a class="nav-link" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+    <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
       <i class="bi bi-journal-text"></i><span>Clase</span><i class="bi bi-chevron-down ms-auto"></i>
     </a>
-    <ul id="forms-nav" class="nav-content collapse show  " data-bs-parent="#sidebar-nav">
+    <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
       <li>
-        <a href="regcurso.php" class="active">
+        <a href="regcurso.php">
           <i class="bi bi-circle"></i><span>Cursos</span>
         </a>
       </li>
@@ -374,10 +377,31 @@
           <i class="bi bi-circle"></i><span>General</span>
         </a>
       </li>
-      
+    
     </ul>
   </li><!-- End Tables Nav -->
-<?php } ?>
+<?php }?>  
+
+ <!-- SALONES-->
+<?php if($tipo=="profe"){?> 
+ 
+  <li class="nav-item">
+    <a class="nav-link " data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+      <i class="bi bi-journal-text"></i><span>Clase</span><i class="bi bi-chevron-down ms-auto"></i>
+    </a>
+    <ul id="forms-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+      <li>
+        <a href="salones.php" class="active">
+          <i class="bi bi-circle"></i><span>Salones</span>
+        </a>
+      </li>
+      
+    </ul>
+
+  </li><!-- End Forms Nav -->
+
+<?php }
+?>
 
 
   <li class="nav-heading">Paginas</li>
@@ -406,62 +430,38 @@
 <main id="main" class="main">
 
 <div class="pagetitle">
-  <h1> incripcion a cursos</h1>
+  <h1>Salones </h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-      <li class="breadcrumb-item active">Clase</li>
-      <li class="breadcrumb-item active">Cursos</li>
+      <li class="breadcrumb-item"><a href="inicio.php">Inicio</a></li>
+      <li class="breadcrumb-item "><a href="salones.php">Clase</a></li>
+      <li class="breadcrumb-item active"><a href="salones.php">Salones</a></li>
+      <li class="breadcrumb-item ">Calificar</li>
     </ol>
   </nav>
 </div><!-- End Page Title -->
 
 <section class="section">
       <div class="row">
-     
+        <div class="col-lg-12">
 
-        <div class="col-lg-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title"> Inscribete en los cursos que estan disponibles para ti</h5>
 
-                <!-- No Labels Form -->
-                <form class="row g-3" method="post">
-                  
-                  <div class="col-md-10">
-                    <select id="inputState" class="form-select" name="curso">
-                      <?php include('listas/cursomatri.php');?>
-                    </select>
-                  </div>
-                  
-                  <div class="text-center">
-                    <button type="submit" class="btn btn-primary" name="enviar">Inscribirse</button>
-                    <button type="reset" class="btn btn-secondary">Cancelar</button>
-                  </div>
-                </form><!-- End No Labels Form -->
+          <div class="card">
+            <div class="card-body">              
 
-              </div>
-            <?php include("php/matricula.php");?>
+              <?php include('listas/listaAlu.php') ?>
+              <!-- Pills Tabs -->
+
             </div>
-       </div>
-
-       <div class="col-lg-6">
-        <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Cursos </h5>
-                <p>Se muestran los cursos en los que estas matriculado</p>
-                <!-- Small tables -->
-                       <?php include('listas/cursos_matriculados.php');?>
-                <!-- End small tables -->
-
-              </div>
           </div>
-       </div>
 
-    </div>
+        </div>
 
-     
+ 
+
+      </div>
     </section>
+
 </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -489,9 +489,10 @@
   <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/main2.js"></script>
 
 </body>
 

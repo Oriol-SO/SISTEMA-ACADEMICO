@@ -3,7 +3,8 @@ body {
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 100vh;
-    background-image: url("../IMG/fondo.jpg");
+    /*background-image: url("../IMG/fondo.jpg");*/
+    background-image: url('https://c.pxhere.com/images/93/fd/ff4a999fdbb4079c763c08364a6f-1443557.jpg!d');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -12,8 +13,8 @@ body {
 .login-box {
     width: 400px;
     height: 520px;
-    background:linear-gradient(120deg,#12546169,#0d35417c,#070d0f);
-    color: #fff;
+    background:linear-gradient(120deg,#ffffff,#ffffff,#ffffff);
+    color: #000;
     top: 50%;
     left: 50%;
     position: absolute;
@@ -21,7 +22,7 @@ body {
     box-sizing: border-box;
     padding: 70px 30px;
     border-radius: 10px;
-    box-shadow: 7px 13px 37px #000;
+    box-shadow:2px 6px 10px rgb(32, 32, 32);
     display: flex;
     flex-direction: column;
 }
@@ -44,24 +45,31 @@ body {
     font-family: 'fuente1';
     src: url(../fuentes/Huggable\ Hedgehogs\ Demo.otf);
 }*/
-
+.title{
+    margin-top: -70px;
+}
+img{
+    width: 80px;
+    display: flex;
+    margin: auto;
+}
 .login-box h1{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    margin: 15;
-    padding: 5;
     text-align: center;
     justify-content: center;
-    font-size: 35px;
-    font-weight: 300;
+    font-size: 30px;
+    font-weight: 200;
+    margin-top: 5px;
 }
 .login-box label{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin: 10;
     padding: 0;
-    font-weight: bold;
     display: block;
     font-size: 20px;
     font-weight: 250;
+    color: #5d6266;
+    margin-bottom: 10px;
 }
 
 .login-box input{
@@ -72,28 +80,30 @@ body {
 
 .login-box input[type="text"],
 .login-box input[type="password"]{
-    border: none;
-    border-bottom: 1px solid #fff;
+    border:1px solid #ced4da;
     background: transparent;
     outline: none;
     height: 40px;
-    color: #fff;
+    color: rgb(7, 7, 7);
     font-size: 16px;
     padding-left: 10px;
+    border-radius: 5px;
+    
 }
 
 .login-box input[type="submit"]{
     border: none;
     outline: none;
     height: 40px;
-    background:linear-gradient(130deg,#08353680,#15888b80,#1bb0b380);
+    background:#0d6efd;
     color: #fff;
     font-size: 26px;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-top: 40px;
 }
 .login-box input[type="submit"]:hover {
-    background-color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
     cursor: pointer;
 }
 .roles{
