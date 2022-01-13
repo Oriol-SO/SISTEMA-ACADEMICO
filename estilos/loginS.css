@@ -3,12 +3,22 @@ body {
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 100vh;
-    /*background-image: url("../IMG/fondo.jpg");*/
+    /*background: url("../IMG/fondo.jpg");*/
     background-image: url('https://c.pxhere.com/images/93/fd/ff4a999fdbb4079c763c08364a6f-1443557.jpg!d');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+   /* background-color: #f6f9ff;*/
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+  
+
+
 }
 
+@media (max-width:1250px) {
+    body{
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
 
 .login-box {
     width: 400px;
